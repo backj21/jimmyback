@@ -29,6 +29,32 @@ html { scroll-behavior: smooth; }
 ::-webkit-scrollbar-thumb:hover { background: #B0A898; }
 
 
+/* ---------- Nav brand ---------- */
+.nav-brand {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35em;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  transition: opacity 0.2s;
+}
+.nav-brand:hover { opacity: 0.8; }
+
+.nav-brand-first {
+  color: #111;
+  font-weight: 400;
+}
+
+.nav-brand-last {
+  background: linear-gradient(135deg, #F2663A 0%, #C03B0D 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
 /* ---------- Navbar ---------- */
 #navbar {
   background: transparent;
