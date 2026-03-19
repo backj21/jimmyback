@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Jimmy Back's programming blog — systems, web, algorithms, and student life." />
+  <title>Blog — Jimmy Back</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['"Instrument Serif"', 'serif'],
+            sans:    ['Outfit', 'sans-serif'],
+            mono:    ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body class="font-sans bg-[#FAFAF5] text-[#111111] antialiased">
+
+  <!-- ============ NAVBAR ============ -->
+  <nav id="navbar" class="fixed w-full top-0 z-50 scrolled">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="flex items-center justify-between h-16">
+        <a href="../index.html" class="font-display text-xl text-[#111] hover:text-[#E8541E] transition-colors duration-200">
+          Jimmy Back
+        </a>
+        <div class="hidden md:flex items-center gap-7">
+          <a href="../index.html#about"      class="nav-link">About</a>
+          <a href="../index.html#skills"     class="nav-link">Skills</a>
+          <a href="../index.html#projects"   class="nav-link">Projects</a>
+          <a href="../blog/"                 class="nav-link active">Blog</a>
+          <a href="../index.html#experience" class="nav-link">Experience</a>
+          <a href="../index.html#contact"    class="nav-cta">Contact ↗</a>
+        </div>
+        <a href="../index.html" class="md:hidden text-sm font-medium text-[#888] hover:text-[#111] transition-colors">
+          ← Home
+        </a>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- ============ HEADER ============ -->
+  <header class="pt-32 pb-16 px-6 bg-white border-b border-[#E8E2D9]">
+    <div class="max-w-7xl mx-auto">
+      <p class="font-mono text-xs text-[#E8541E] tracking-[0.1em] uppercase mb-3">// Writing</p>
+      <h1 class="font-display text-[clamp(3rem,8vw,6rem)] leading-none tracking-tight text-[#111] mb-4">
+        The Blog
+      </h1>
+      <p class="text-[#777] text-lg max-w-xl leading-relaxed">
+        Notes on systems programming, web development, algorithms, and life as a CS student at UIUC.
+      </p>
+    </div>
+  </header>
+
+
+  <!-- ============ FILTER TABS ============ -->
+  <div class="sticky top-16 z-40 bg-[#FAFAF5]/95 backdrop-blur-md border-b border-[#E8E2D9]">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="flex items-center gap-1 py-3 overflow-x-auto no-scrollbar">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="Systems">Systems</button>
+        <button class="filter-btn" data-filter="Web">Web</button>
+        <button class="filter-btn" data-filter="Algorithms">Algorithms</button>
+        <button class="filter-btn" data-filter="Career">Career</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ============ POSTS ============ -->
+  <main class="py-16 px-6">
+    <div class="max-w-7xl mx-auto">
+
+      <div id="posts-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+        <!-- Post 1 -->
+        <a href="post-1.html" class="blog-card group" data-category="Systems">
+          <div class="blog-meta">
+            <span class="blog-tag">Systems</span>
+            <span class="blog-date font-mono">Mar 2025</span>
+          </div>
+          <h2 class="blog-title">
+            What I Learned Writing a Memory Allocator in C
+          </h2>
+          <p class="blog-excerpt">
+            Diving deep into malloc internals: free lists, coalescing, and why writing your
+            own allocator teaches you things no textbook can.
+          </p>
+          <div class="blog-footer">
+            <span class="blog-readmore">5 min read →</span>
+            <span class="blog-author font-mono">Jimmy Back</span>
+          </div>
+        </a>
+
+        <!-- Post 2 -->
+        <a href="post-2.html" class="blog-card group" data-category="Web">
+          <div class="blog-meta">
+            <span class="blog-tag">Web</span>
+            <span class="blog-date font-mono">Feb 2025</span>
+          </div>
+          <h2 class="blog-title">
+            Building This Portfolio From Scratch
+          </h2>
+          <p class="blog-excerpt">
+            No frameworks, no build tools — just HTML, CSS, and vanilla JS.
+            Here's why I chose simplicity and what I learned along the way.
+          </p>
+          <div class="blog-footer">
+            <span class="blog-readmore">3 min read →</span>
+            <span class="blog-author font-mono">Jimmy Back</span>
+          </div>
+        </a>
+
+        <!-- Post 3 -->
+        <a href="post-3.html" class="blog-card group" data-category="Algorithms">
+          <div class="blog-meta">
+            <span class="blog-tag">Algorithms</span>
+            <span class="blog-date font-mono">Jan 2025</span>
+          </div>
+          <h2 class="blog-title">
+            Why Graph Problems are Actually Interesting
+          </h2>
+          <p class="blog-excerpt">
+            After struggling through CS 374, I started to see the elegance in graph
+            traversal and dynamic programming. A student's perspective.
+          </p>
+          <div class="blog-footer">
+            <span class="blog-readmore">4 min read →</span>
+            <span class="blog-author font-mono">Jimmy Back</span>
+          </div>
+        </a>
+
+        <!--
+          To add a new post:
+          1. Copy any <a class="blog-card"> block above
+          2. Update the href, data-category, blog-tag, blog-date, title, excerpt, and read time
+          3. Create the corresponding .html file in this directory
+        -->
+
+      </div>
+
+      <!-- Empty state (shown by JS when filter has no results) -->
+      <div id="empty-state" class="hidden text-center py-24">
+        <p class="font-display text-4xl text-[#DDD] mb-3">No posts yet</p>
+        <p class="text-[#AAA] text-sm">Check back soon — more writing on the way.</p>
+      </div>
+
+    </div>
+  </main>
+
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="py-8 px-6 border-t border-[#E8E2D9]">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[#AAA]">
+      <a href="../index.html" class="font-mono hover:text-[#E8541E] transition-colors">← Back to Portfolio</a>
+      <p class="font-mono">&copy; <span id="footer-year"></span> Jimmy Back</p>
+    </div>
+  </footer>
+
+  <style>
+    /* Blog-page-specific styles */
+    .filter-btn {
+      flex-shrink: 0;
+      padding: 0.375rem 0.875rem;
+      font-size: 0.8125rem;
+      font-weight: 500;
+      color: #888;
+      border-radius: 0.5rem;
+      border: 1px solid transparent;
+      background: transparent;
+      cursor: pointer;
+      transition: color 0.15s, background 0.15s, border-color 0.15s;
+      white-space: nowrap;
+    }
+    .filter-btn:hover { color: #111; background: rgba(0,0,0,0.04); }
+    .filter-btn.active {
+      color: #E8541E;
+      background: rgba(232, 84, 30, 0.07);
+      border-color: rgba(232, 84, 30, 0.15);
+    }
+
+    .blog-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: auto;
+    }
+    .blog-author {
+      font-size: 0.7rem;
+      color: #CCC;
+      letter-spacing: 0.04em;
+    }
+
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+    /* Fade-out hidden posts */
+    .blog-card.hidden-post {
+      display: none;
+    }
+  </style>
+
+  <script>
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
+
+    // Filter tabs
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const posts = document.querySelectorAll('.blog-card[data-category]');
+    const emptyState = document.getElementById('empty-state');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.dataset.filter;
+        let visible = 0;
+
+        posts.forEach(post => {
+          const match = filter === 'all' || post.dataset.category === filter;
+          post.classList.toggle('hidden-post', !match);
+          if (match) visible++;
+        });
+
+        emptyState.classList.toggle('hidden', visible > 0);
+      });
+    });
+  </script>
+</body>
+</html>
