@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My First Hackathon - Jimmy Back</title>
+  <meta name="description" content="Reflections from my first hackathon experience at HackIllinois." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Outfit', 'sans-serif'],
+            display: ['Instrument Serif', 'serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body class="antialiased bg-[#FAFAF5] text-[#111]">
+  <header class="sticky top-0 z-50 bg-[#FAFAF5]/95 backdrop-blur-md border-b border-[#E8E2D9]">
+    <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="../index.html" class="font-mono text-xs hover:text-[#E8541E] transition-colors">← Back to Portfolio</a>
+      <a href="./index.html" class="font-mono text-xs hover:text-[#E8541E] transition-colors">All Posts</a>
+    </div>
+  </header>
+
+  <main class="px-6 py-16">
+    <article class="max-w-3xl mx-auto">
+      <p class="section-eyebrow mb-4">// Career</p>
+      <h1 class="font-display text-[clamp(2.2rem,8vw,4.5rem)] leading-[0.95] tracking-tight mb-6">
+        My First Hackathon
+      </h1>
+      <div class="flex items-center gap-4 text-xs text-[#888] font-mono mb-10">
+        <span>Mar 2026</span>
+        <span>4 min read</span>
+        <span>Jimmy Back</span>
+      </div>
+
+      <div class="space-y-6 text-[1.02rem] leading-relaxed text-[#333]">
+        <p>
+          HackIllinois was my first full hackathon experience, and it completely changed
+          how I think about building. I worked with my team on ease &#39;n spect, a mobile
+          AI-assisted inspection workflow for heavy machinery.
+        </p>
+        <p>
+          The biggest lesson was speed with clarity. We had to make decisions quickly,
+          keep the product flow simple, and avoid overbuilding features that did not
+          improve the core user experience.
+        </p>
+        <p>
+          We focused on a clean end-to-end story: guided capture, voice notes, analysis,
+          and a final summary that operators could actually use. That focus helped us ship
+          something cohesive under real time pressure.
+        </p>
+        <p>
+          Presenting the final product was just as important as writing the code. Telling a
+          clear technical and product story is what helped us stand out and place first in
+          the Caterpillar track.
+        </p>
+      </div>
+    </article>
+  </main>
+</body>
+</html>
