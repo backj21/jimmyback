@@ -5,6 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Jimmy Back — Computer Science Undergraduate at UIUC. Portfolio showcasing projects, skills, and experience." />
   <title>Jimmy Back</title>
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('theme');
+        var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {}
+    })();
+  </script>
 
   <!-- Favicons -->
   <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -243,7 +252,7 @@
           </div>
           <h3 class="project-title">ease &#39;n spect</h3>
           <p class="project-desc">
-            1st Place in the HackIllinois Caterpillar track. Built an AI-powered mobile
+            <strong class="font-semibold text-[#111]">1st Place</strong> in the HackIllinois Caterpillar track. Built an AI-powered mobile
             inspection workflow that guides heavy-equipment checks with 3D camera cues,
             voice notes, and multimodal analysis to generate clear, actionable summaries.
           </p>
@@ -253,6 +262,30 @@
               GitHub
             </a>
             <a href="https://devpost.com/software/inspectus" class="project-link">Devpost ↗</a>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card reveal">
+          <div class="project-header">
+            <span class="project-num font-mono">02</span>
+            <div class="flex gap-1.5 flex-wrap">
+              <span class="tag">XGBoost</span>
+              <span class="tag">HDBSCAN</span>
+              <span class="tag">Python</span>
+            </div>
+          </div>
+          <h3 class="project-title">Illinois 2025 Statistics Datathon</h3>
+          <p class="project-desc">
+            University of Illinois Urbana-Champaign. Finished <strong class="font-semibold text-[#111]">2nd of 180 teams</strong>
+            with a pipeline for historical customer spending: a three-step feature selection
+            strategy, engineered signals from eight months of transaction data feeding an
+            XGBoost model to forecast next-quarter spend, and HDBSCAN clustering to group
+            accounts and highlight strong credit histories for credit-limit decisions.
+          </p>
+          <div class="project-footer">
+            <span class="font-mono text-[0.7rem] text-[#AAA] tracking-wide">Mar 2025 · UIUC</span>
+            <a href="https://www.youtube.com/watch?v=bqTGzV6UMYE" target="_blank" rel="noopener noreferrer" class="project-link">Presentation ↗</a>
           </div>
         </article>
 
@@ -370,11 +403,10 @@
 
         <p class="section-eyebrow" style="color:#E8541E">// 06 — Contact</p>
         <h2 class="font-display text-[clamp(2.75rem,8vw,5.5rem)] leading-[0.95] tracking-tight text-white mb-6">
-          Let's build<br /><em class="not-italic" style="color:#E8541E">something</em> together.
+          Feel free to <br /><em class="not-italic" style="color:#E8541E">reach out</em> to me!
         </h2>
         <p class="text-[#888] text-lg leading-relaxed mb-10 max-w-xl">
-          Whether you're a recruiter, researcher, or collaborator — I'm open to internships,
-          research positions, and interesting conversations.
+          I'm always willing to connect and chat with others.
         </p>
 
         <div class="flex flex-wrap gap-3">
@@ -405,6 +437,12 @@
     </div>
   </footer>
 
+  <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">
+    <span class="theme-toggle-icon" aria-hidden="true">🌙</span>
+    <span class="theme-toggle-label">Dark</span>
+  </button>
+
+  <script src="theme.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

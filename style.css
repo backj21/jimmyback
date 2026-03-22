@@ -617,3 +617,88 @@ html { scroll-behavior: smooth; }
   opacity: 1;
   transform: translateY(0);
 }
+
+/* ---------- Theme toggle ---------- */
+.theme-toggle {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 60;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--bg-white);
+  color: var(--text);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+.theme-toggle:hover {
+  transform: translateY(-1px);
+  border-color: var(--border-mid);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+.theme-toggle-icon {
+  font-size: 0.8rem;
+  line-height: 1;
+}
+
+/* ---------- Dark mode ---------- */
+html[data-theme='dark'] {
+  --bg: #0f1115;
+  --bg-white: #151922;
+  --text: #e5e7eb;
+  --muted: #a3aab7;
+  --border: #273041;
+  --border-mid: #334057;
+}
+
+html[data-theme='dark'] body {
+  background: var(--bg) !important;
+  color: var(--text) !important;
+}
+
+html[data-theme='dark'] #navbar.scrolled {
+  background: rgba(15, 17, 21, 0.9);
+}
+
+html[data-theme='dark'] .hero-watermark {
+  color: rgba(255, 255, 255, 0.03);
+}
+
+html[data-theme='dark'] .text-\[\#111\],
+html[data-theme='dark'] .text-\[\#111111\] {
+  color: #e5e7eb !important;
+}
+html[data-theme='dark'] .text-\[\#333\],
+html[data-theme='dark'] .text-\[\#555\],
+html[data-theme='dark'] .text-\[\#666\],
+html[data-theme='dark'] .text-\[\#777\],
+html[data-theme='dark'] .text-\[\#888\],
+html[data-theme='dark'] .text-\[\#AAA\],
+html[data-theme='dark'] .text-\[\#DDD\] {
+  color: #aeb6c3 !important;
+}
+
+html[data-theme='dark'] .bg-white,
+html[data-theme='dark'] .bg-\[\#FAFAF5\] {
+  background: var(--bg-white) !important;
+}
+html[data-theme='dark'] .bg-\[\#111111\],
+html[data-theme='dark'] .bg-\[\#0D0D0D\] {
+  background: #0b0f16 !important;
+}
+html[data-theme='dark'] .bg-\[\#F2EDE3\] {
+  background: #202737 !important;
+}
+
+html[data-theme='dark'] .border-\[\#E8E2D9\],
+html[data-theme='dark'] .border-\[\#1E1E1E\],
+html[data-theme='dark'] .border-\[\#2A2A2A\] {
+  border-color: var(--border) !important;
+}
