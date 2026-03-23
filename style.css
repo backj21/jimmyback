@@ -667,6 +667,10 @@ html[data-theme='dark'] #navbar.scrolled {
   background: rgba(15, 17, 21, 0.9);
 }
 
+html[data-theme='dark'] .nav-brand-first {
+  color: var(--text);
+}
+
 html[data-theme='dark'] .hero-watermark {
   color: rgba(255, 255, 255, 0.03);
 }
@@ -689,6 +693,11 @@ html[data-theme='dark'] .bg-white,
 html[data-theme='dark'] .bg-\[\#FAFAF5\] {
   background: var(--bg-white) !important;
 }
+
+/* Tailwind `bg-[#FAFAF5]/95` — separate class; keep dark surfaces aligned with --bg */
+html[data-theme='dark'] .bg-\[\#FAFAF5\]\/95 {
+  background: rgba(15, 17, 21, 0.95) !important;
+}
 html[data-theme='dark'] .bg-\[\#111111\],
 html[data-theme='dark'] .bg-\[\#0D0D0D\] {
   background: #0b0f16 !important;
@@ -701,4 +710,28 @@ html[data-theme='dark'] .border-\[\#E8E2D9\],
 html[data-theme='dark'] .border-\[\#1E1E1E\],
 html[data-theme='dark'] .border-\[\#2A2A2A\] {
   border-color: var(--border) !important;
+}
+
+/* Blog listing: hero header + sticky filter — align with body + navbar (not --bg-white) */
+html[data-theme='dark'] .blog-page-header {
+  background: var(--bg) !important;
+}
+
+html[data-theme='dark'] .blog-filter-bar {
+  background: rgba(15, 17, 21, 0.92) !important;
+}
+
+/* Skills: "learning" / "soon" pills — light cream + gray text is low-contrast on dark cards */
+html[data-theme='dark'] .badge-pill {
+  color: #d1d7e0 !important;
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--border-mid);
+}
+
+html[data-theme='dark'] .skill-item.skill-soon {
+  color: var(--muted);
+}
+
+html[data-theme='dark'] .skill-soon .skill-dot {
+  background: var(--border-mid);
 }
