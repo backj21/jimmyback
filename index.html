@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Jimmy Back — Computer Science Undergraduate at UIUC. Portfolio showcasing projects, skills, and experience." />
+  <meta name="description" content="Jimmy Back — Computer Science Undergraduate at UIUC." />
   <title>Jimmy Back</title>
+  
   <script>
     (function () {
       try {
@@ -24,424 +25,226 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap" rel="stylesheet" />
-
-  <!-- Tailwind CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            display: ['Geist', 'sans-serif'],
-            sans:    ['Geist', 'sans-serif'],
-            mono:    ['"Geist Mono"', 'monospace'],
-          }
-        }
-      }
-    }
-  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800;900&family=Geist+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="style.css" />
 </head>
-<body class="font-sans bg-[#FAFAF5] text-[#111111] antialiased">
+<body class="transition-colors duration-300">
 
-  <!-- ============ NAVBAR ============ -->
-  <nav id="navbar" class="fixed w-full top-0 z-50">
-    <div class="max-w-7xl mx-auto px-6 lg:px-10">
-      <div class="flex items-center justify-between h-16">
+  <!-- ============ FLOATING NAVBAR ============ -->
+  <header class="floating-nav-container">
+    <nav class="floating-nav">
+      <a href="#home" class="nav-brand">J</a>
+      <div class="nav-links">
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#projects"   class="nav-link">Projects</a>
+        <a href="#skills"     class="nav-link">Skills</a>
+        <a href="#contact"    class="nav-link">Contact</a>
+      </div>
+      <!-- Theme toggle is embedded in the nav for a clean look -->
+      <button id="theme-toggle" class="nav-theme-toggle" type="button" aria-label="Toggle dark mode">
+        <span class="theme-toggle-icon">🌙</span>
+      </button>
+    </nav>
+  </header>
 
-        <a href="#home" class="nav-brand">
-          <span class="nav-brand-first">Jimmy</span><span class="nav-brand-last">Back</span>
-        </a>
-
-        <!-- Desktop links -->
-        <div class="hidden md:flex items-center gap-7">
-          <a href="#about"      class="nav-link">About</a>
-          <a href="#skills"     class="nav-link">Skills</a>
-          <a href="#projects"   class="nav-link">Projects</a>
-          <a href="#blog"       class="nav-link">Blog</a>
-          <a href="#experience" class="nav-link">Experience</a>
-          <a href="#contact"    class="nav-cta">Contact ↗</a>
+  <!-- ============ MAIN CONTENT ============ -->
+  <main class="page-wrapper">
+    
+    <!-- HERO -->
+    <section id="home" class="hero-section">
+      <div class="reveal">
+        <div class="hero-status">
+          <span class="status-indicator"></span>
+          <span>Open to Opportunities</span>
         </div>
-
-        <!-- Mobile hamburger -->
-        <button id="menu-btn" class="md:hidden p-2 rounded-lg text-[#777] hover:text-[#111] hover:bg-[#F2EDE3] transition-colors" aria-label="Toggle navigation">
-          <svg id="icon-open"  class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-          <svg id="icon-close" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-        </button>
+        <h1 class="hero-title">
+          HELLO, <br>
+          I'M <span class="highlight">JIMMY BACK.</span><br>
+          SOFTWARE ENGINEER.
+        </h1>
+        <p class="hero-subtitle">
+          CS undergrad at <strong>UIUC</strong> focused on distributed systems,<br class="hidden sm:block"> 
+          low-level performance, and clean, beautiful web applications.
+        </p>
       </div>
-    </div>
+    </section>
 
-    <!-- Mobile menu -->
-    <div id="mobile-menu" class="hidden md:hidden border-t border-[#E8E2D9] bg-[#FAFAF5]/95 backdrop-blur-md">
-      <div class="px-6 py-5 flex flex-col gap-4">
-        <a href="#about"      class="mobile-link">About</a>
-        <a href="#skills"     class="mobile-link">Skills</a>
-        <a href="#projects"   class="mobile-link">Projects</a>
-        <a href="#blog"       class="mobile-link">Blog</a>
-        <a href="#experience" class="mobile-link">Experience</a>
-        <a href="#contact"    class="mobile-link">Contact</a>
-      </div>
-    </div>
-  </nav>
-
-
-  <!-- ============ HERO ============ -->
-  <section id="home" class="relative min-h-screen flex items-center px-6 pt-16 overflow-hidden">
-    <div class="hero-bg" aria-hidden="true"></div>
-
-    <div class="relative z-10 max-w-7xl mx-auto w-full py-24 md:py-32">
-
-      <!-- Status badge -->
-      <div class="reveal flex items-center gap-2.5 mb-8">
-        <span class="status-dot" aria-hidden="true"></span>
-        <span class="font-mono text-xs tracking-[0.2em] text-[#E8541E] uppercase">Open to Opportunities</span>
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section">
+      <div class="section-header reveal">
+        <span class="section-number">01</span>
+        <h2 class="section-title">EXPERIENCE</h2>
       </div>
 
-      <!-- Name -->
-      <h1 class="reveal font-display text-[clamp(4.5rem,16vw,11rem)] leading-[0.88] tracking-tight text-[#111] mb-8">
-        Jimmy<br />
-        <span class="hero-name-accent">Back</span>
-      </h1>
-
-      <!-- Tagline -->
-      <p class="reveal text-lg md:text-xl text-[#666] font-light leading-relaxed max-w-xl mb-10">
-        CS Undergrad at <span class="font-semibold text-[#111]">UIUC</span> building meaningful software —
-        from low-level systems in C/C++ to full-stack web applications.
-      </p>
-
-      <!-- CTAs -->
-      <div class="reveal flex flex-wrap gap-3">
-        <a href="#projects"  class="btn-primary">See My Work</a>
-        <a href="#blog"      class="btn-secondary">Read My Blog</a>
-        <a href="#contact"   class="btn-ghost">Get in Touch ↗</a>
-      </div>
-
-      <!-- Stats row -->
-      <div class="reveal mt-14 grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-2xl">
-        <div class="stat-card">
-          <span class="stat-num">2021</span>
-          <span class="stat-label">UIUC Enrolled</span>
-        </div>
-        <div class="stat-card">
-          <span class="stat-num">3+</span>
-          <span class="stat-label">Projects Built</span>
-        </div>
-        <div class="stat-card">
-          <span class="stat-num">C++</span>
-          <span class="stat-label">Core Language</span>
-        </div>
-        <div class="stat-card">
-          <span class="stat-num">↗</span>
-          <span class="stat-label">Actively Learning</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Decorative watermark -->
-    <div class="hero-watermark" aria-hidden="true">JB</div>
-  </section>
-
-
-  <!-- ============ ABOUT ============ -->
-  <section id="about" class="py-28 px-6 bg-white">
-    <div class="max-w-7xl mx-auto">
-      <div class="grid md:grid-cols-2 gap-16 items-start">
-
-        <div class="reveal">
-          <p class="section-eyebrow">// 01 — About</p>
-          <h2 class="section-heading">Who I Am</h2>
-        </div>
-
-        <div class="reveal space-y-5 text-[#555] leading-relaxed">
-          <p class="text-lg">
-            Hey, I'm <span class="font-semibold text-[#111]">Jimmy Back</span> — a Computer Science student
-            at the <span class="font-semibold text-[#111]">University of Illinois Urbana-Champaign</span>.
-          </p>
-          <p>
-            I'm drawn to problems at the intersection of performance and user experience —
-            writing efficient systems code and building clean interfaces that people actually enjoy using.
-          </p>
-          <p>
-            Outside coursework I'm always working on personal projects, exploring new technologies,
-            and looking for opportunities to collaborate with other engineers and researchers.
-          </p>
-          <a href="#contact" class="about-link">
-            Let's connect <span class="about-link-arrow">→</span>
-          </a>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ============ SKILLS ============ -->
-  <section id="skills" class="py-28 px-6 bg-[#FAFAF5]">
-    <div class="max-w-7xl mx-auto">
-
-      <div class="reveal mb-12">
-        <p class="section-eyebrow">// 02 — Skills</p>
-        <h2 class="section-heading">What I Work With</h2>
-      </div>
-
-      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-5">
-
-        <div class="skill-card reveal">
-          <h3 class="skill-card-label">Languages</h3>
-          <ul class="skill-list">
-            <li class="skill-item"><span class="skill-dot"></span>C / C++</li>
-            <li class="skill-item"><span class="skill-dot"></span>Java</li>
-            <li class="skill-item"><span class="skill-dot"></span>Python</li>
-            <li class="skill-item skill-soon"><span class="skill-dot"></span>Rust <span class="badge-pill">learning</span></li>
-          </ul>
-        </div>
-
-        <div class="skill-card reveal">
-          <h3 class="skill-card-label">Web</h3>
-          <ul class="skill-list">
-            <li class="skill-item"><span class="skill-dot"></span>HTML / CSS</li>
-            <li class="skill-item"><span class="skill-dot"></span>JavaScript</li>
-            <li class="skill-item"><span class="skill-dot"></span>TypeScript</li>
-            <li class="skill-item skill-soon"><span class="skill-dot"></span>React <span class="badge-pill">learning</span></li>
-          </ul>
-        </div>
-
-        <div class="skill-card sm:col-span-2 md:col-span-1 reveal">
-          <h3 class="skill-card-label">Tools & Systems</h3>
-          <ul class="skill-list">
-            <li class="skill-item"><span class="skill-dot"></span>Git / GitHub</li>
-            <li class="skill-item"><span class="skill-dot"></span>Linux / Shell</li>
-            <li class="skill-item"><span class="skill-dot"></span>GDB / Valgrind</li>
-            <li class="skill-item skill-soon"><span class="skill-dot"></span>Docker <span class="badge-pill">soon</span></li>
-          </ul>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ============ PROJECTS ============ -->
-  <section id="projects" class="py-28 px-6 bg-white">
-    <div class="max-w-7xl mx-auto">
-
-      <div class="reveal flex flex-wrap items-end justify-between gap-6 mb-12">
-        <div>
-          <p class="section-eyebrow">// 03 — Projects</p>
-          <h2 class="section-heading">What I've Built</h2>
-        </div>
-        <a href="https://github.com/backj21" target="_blank" rel="noopener noreferrer" class="view-all-link">
-          All on GitHub ↗
-        </a>
-      </div>
-
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-
-        <!-- Project 1 -->
-        <article class="project-card reveal">
-          <div class="project-header">
-            <span class="project-num font-mono">01</span>
-            <div class="flex gap-1.5 flex-wrap">
-              <span class="tag">React Native</span>
-              <span class="tag">FastAPI</span>
-              <span class="tag">Modal</span>
-              <span class="tag">Supabase</span>
-            </div>
+      <div class="experience-list">
+        <!-- Item 1 -->
+        <div class="experience-item reveal group">
+          <div class="exp-meta">
+            <span class="exp-date">2025 - Present</span>
           </div>
-          <h3 class="project-title">ease &#39;n spect</h3>
-          <p class="project-desc">
-            <strong class="font-semibold text-[#111]">1st Place</strong> in the HackIllinois Caterpillar track. Built an AI-powered mobile
-            inspection workflow that guides heavy-equipment checks with 3D camera cues,
-            voice notes, and multimodal analysis to generate clear, actionable summaries.
-          </p>
-          <div class="project-footer">
-            <span class="font-mono text-[0.7rem] text-[#AAA] tracking-wide">February 2026</span>
-            <a href="https://github.com/backj21/easeandspect.git" class="project-link" aria-label="GitHub">
-              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-              GitHub
-            </a>
-            <a href="https://devpost.com/software/inspectus" class="project-link">Devpost ↗</a>
-          </div>
-        </article>
-
-        <!-- Project 2 -->
-        <article class="project-card reveal">
-          <div class="project-header">
-            <span class="project-num font-mono">02</span>
-            <div class="flex gap-1.5 flex-wrap">
-              <span class="tag">XGBoost</span>
-              <span class="tag">HDBSCAN</span>
-              <span class="tag">Python</span>
-            </div>
-          </div>
-          <h3 class="project-title">Illinois 2025 Statistics Datathon</h3>
-          <p class="project-desc">
-            University of Illinois Urbana-Champaign. Finished <strong class="font-semibold text-[#111]">2nd of 180 teams</strong>
-            with a pipeline for historical customer spending: a three-step feature selection
-            strategy, engineered signals from eight months of transaction data feeding an
-            XGBoost model to forecast next-quarter spend, and HDBSCAN clustering to group
-            accounts and highlight strong credit histories for credit-limit decisions.
-          </p>
-          <div class="project-footer">
-            <span class="font-mono text-[0.7rem] text-[#AAA] tracking-wide">Mar 2025 · UIUC</span>
-            <a href="https://www.youtube.com/watch?v=bqTGzV6UMYE" target="_blank" rel="noopener noreferrer" class="project-link">Presentation ↗</a>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ============ BLOG ============ -->
-  <section id="blog" class="py-28 px-6 bg-[#FAFAF5]">
-    <div class="max-w-7xl mx-auto">
-
-      <div class="reveal flex flex-wrap items-end justify-between gap-6 mb-12">
-        <div>
-          <p class="section-eyebrow">// 04 — Writing</p>
-          <h2 class="section-heading">From the Blog</h2>
-        </div>
-        <a href="blog/my-first-hackathon.html" class="view-all-link">All Posts ↗</a>
-      </div>
-
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-
-        <a href="blog/my-first-hackathon.html" class="blog-card reveal group">
-          <div class="blog-meta">
-            <span class="blog-tag">Career</span>
-            <span class="blog-date font-mono">Mar 2026</span>
-          </div>
-          <h3 class="blog-title">My First Hackathon</h3>
-          <p class="blog-excerpt">
-            Reflections from building ease &#39;n spect at HackIllinois and what I learned
-            from collaborating, shipping fast, and presenting under pressure.
-          </p>
-          <span class="blog-readmore">4 min read →</span>
-        </a>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ============ EXPERIENCE ============ -->
-  <section id="experience" class="py-28 px-6 bg-white">
-    <div class="max-w-7xl mx-auto">
-
-      <div class="reveal mb-12">
-        <p class="section-eyebrow">// 05 — Experience</p>
-        <h2 class="section-heading">My Journey</h2>
-      </div>
-
-      <div class="max-w-3xl">
-
-        <div class="exp-row reveal">
-          <div class="exp-year font-mono">Oct 2025 — Present</div>
-          <div class="exp-body">
-            <h3 class="exp-role">Undergraduate Research Assistant (Distributed Systems / Storage)</h3>
-            <p class="exp-org">PlatformX Research Lab, University of Illinois</p>
+          <div class="exp-content">
+            <h3 class="exp-role">Undergraduate Research Assistant</h3>
+            <p class="exp-company">UIUC PlatformX Research Lab</p>
             <p class="exp-desc">
-              Designing a distributed file system architecture for GPU Direct Storage to
-              reduce CPU overhead, while analyzing large-scale system internals to improve
-              client-session coordination, metadata handling, and write-throughput reliability.
+              Designing a distributed file system architecture for GPU Direct Storage to reduce CPU overhead. Analyzing large-scale system internals to improve client-session coordination and write-throughput reliability.
             </p>
-            <div class="flex flex-wrap gap-1.5">
+            <div class="tag-group">
               <span class="tag">Distributed Systems</span>
               <span class="tag">Storage</span>
-              <span class="tag">Performance Profiling</span>
+              <span class="tag">C++</span>
             </div>
           </div>
         </div>
 
-        <div class="exp-row reveal">
-          <div class="exp-year font-mono">Jun 2025 — Aug 2025</div>
-          <div class="exp-body">
+        <!-- Item 2 -->
+        <div class="experience-item reveal group">
+          <div class="exp-meta">
+            <span class="exp-date">Summer 2025</span>
+          </div>
+          <div class="exp-content">
             <h3 class="exp-role">Systems Software Engineering Intern</h3>
-            <p class="exp-org">Samsung Electronics</p>
+            <p class="exp-company">Samsung Electronics</p>
             <p class="exp-desc">
-              Implemented low-latency Linux kernel-user diagnostics through shared memory
-              and custom system calls, and built a custom file system with formatting,
-              mount support, and POSIX operations validated through a QEMU-based test loop.
+              Implemented low-latency Linux kernel-user diagnostics through shared memory and custom system calls. Built a custom file system validated through a QEMU-based test loop.
             </p>
-            <div class="flex flex-wrap gap-1.5">
+            <div class="tag-group">
               <span class="tag">Linux Kernel</span>
               <span class="tag">File Systems</span>
-              <span class="tag">QEMU</span>
+              <span class="tag">C</span>
             </div>
           </div>
         </div>
 
-        <div class="exp-row reveal">
-          <div class="exp-year font-mono">Apr 2024 — Jul 2024</div>
-          <div class="exp-body">
+        <!-- Item 3 -->
+        <div class="experience-item reveal group">
+          <div class="exp-meta">
+            <span class="exp-date">Summer 2024</span>
+          </div>
+          <div class="exp-content">
             <h3 class="exp-role">Software Engineering Intern</h3>
-            <p class="exp-org">NHN Cloud</p>
+            <p class="exp-company">NHN Cloud</p>
             <p class="exp-desc">
-              Developed cloud-native backend services with Java and Spring Boot, refactored
-              legacy modules using SOLID principles, and co-developed a multi-elevator
-              simulation engine with performance-focused scheduling logic.
+              Developed cloud-native backend services with Java and Spring Boot. Refactored legacy modules and co-developed a multi-elevator simulation engine with performance-focused scheduling logic.
             </p>
-            <div class="flex flex-wrap gap-1.5">
+            <div class="tag-group">
               <span class="tag">Java</span>
               <span class="tag">Spring Boot</span>
-              <span class="tag">Cloud Backend</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="section-header reveal">
+        <span class="section-number">02</span>
+        <h2 class="section-title">PROJECTS</h2>
+      </div>
+
+      <div class="project-grid">
+        <!-- Project 1 -->
+        <div class="project-card reveal">
+          <div class="project-card-inner">
+            <h3 class="project-title">ease 'n spect</h3>
+            <p class="project-award">1st Place • HackIllinois Caterpillar</p>
+            <p class="project-desc">
+              AI-powered mobile inspection workflow that guides heavy-equipment checks with 3D camera cues, voice notes, and multimodal analysis.
+            </p>
+            <div class="tag-group">
+              <span class="tag">React Native</span>
+              <span class="tag">FastAPI</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/backj21/easeandspect.git" target="_blank" rel="noopener noreferrer" class="project-link-btn">GitHub ↗</a>
+              <a href="https://devpost.com/software/inspectus" target="_blank" rel="noopener noreferrer" class="project-link-btn">Devpost ↗</a>
             </div>
           </div>
         </div>
 
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ============ CONTACT ============ -->
-  <section id="contact" class="py-28 px-6 bg-[#111111]">
-    <div class="max-w-7xl mx-auto">
-      <div class="max-w-3xl">
-
-        <p class="section-eyebrow" style="color:#E8541E">// 06 — Contact</p>
-        <h2 class="font-display text-[clamp(2.75rem,8vw,5.5rem)] leading-[0.95] tracking-tight text-white mb-6">
-          Feel free to <br /><em class="not-italic" style="color:#E8541E">reach out</em> to me!
-        </h2>
-        <p class="text-[#888] text-lg leading-relaxed mb-10 max-w-xl">
-          I'm always willing to connect and chat with others.
-        </p>
-
-        <div class="flex flex-wrap gap-3">
-          <a href="mailto:backjimmy3@gmail.com" class="contact-btn-primary">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-            </svg>
-            Send Email
-          </a>
-          <a href="https://github.com/backj21" target="_blank" rel="noopener noreferrer" class="contact-btn-outline">
-            GitHub ↗
-          </a>
-          <a href="https://www.linkedin.com/in/jimmyback3" target="_blank" rel="noopener noreferrer" class="contact-btn-outline">
-            LinkedIn ↗
-          </a>
+        <!-- Project 2 -->
+        <div class="project-card reveal">
+          <div class="project-card-inner">
+            <h3 class="project-title">UIUC Datathon 2025</h3>
+            <p class="project-award">2nd Place • 180 Teams</p>
+            <p class="project-desc">
+              Pipeline for formatting historical customer spending: engineered signals feeding an XGBoost model and HDBSCAN clustering to highlight strong credit histories.
+            </p>
+            <div class="tag-group">
+              <span class="tag">Python</span>
+              <span class="tag">XGBoost</span>
+            </div>
+            <div class="project-links">
+              <a href="https://www.youtube.com/watch?v=bqTGzV6UMYE" target="_blank" rel="noopener noreferrer" class="project-link-btn">YouTube ↗</a>
+            </div>
+          </div>
         </div>
-
       </div>
-    </div>
-  </section>
+    </section>
 
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <div class="section-header reveal">
+        <span class="section-number">03</span>
+        <h2 class="section-title">SKILLS</h2>
+      </div>
 
-  <!-- ============ FOOTER ============ -->
-  <footer class="py-8 px-6 bg-[#0D0D0D] border-t border-[#1E1E1E]">
-    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[#444]">
-      <p class="font-mono">&copy; <span id="footer-year"></span> Jimmy Back. All rights reserved.</p>
-      <p class="font-mono">Built with HTML, CSS &amp; JavaScript</p>
+      <div class="skills-grid reveal">
+        <div class="skill-category">
+          <h3 class="skill-head">Languages</h3>
+          <ul class="skill-list">
+            <li>C / C++</li>
+            <li>Java</li>
+            <li>Python</li>
+            <li>JavaScript / TypeScript</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h3 class="skill-head">Frameworks</h3>
+          <ul class="skill-list">
+            <li>React & Native</li>
+            <li>Spring Boot</li>
+            <li>Express & Node</li>
+            <li>FastAPI</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h3 class="skill-head">Tools & Sys</h3>
+          <ul class="skill-list">
+            <li>Linux / Unix</li>
+            <li>Git & GitHub</li>
+            <li>GDB / Valgrind</li>
+            <li>Docker</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="section-header reveal">
+        <span class="section-number">04</span>
+        <h2 class="section-title">CONTACT</h2>
+      </div>
+
+      <div class="contact-box reveal">
+        <h2 class="contact-big-text">LET'S BUILD <br>SOMETHING.</h2>
+        <a href="mailto:backjimmy3@gmail.com" class="btn-primary">GET IN TOUCH ↗</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>&copy; <span id="footer-year"></span> Jimmy Back</p>
+      <div class="footer-links">
+        <a href="https://github.com/backj21" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/jimmyback3" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
     </div>
   </footer>
-
-  <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">
-    <span class="theme-toggle-icon" aria-hidden="true">🌙</span>
-    <span class="theme-toggle-label">Dark</span>
-  </button>
 
   <script src="theme.js"></script>
   <script src="script.js"></script>
