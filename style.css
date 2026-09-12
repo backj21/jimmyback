@@ -586,8 +586,8 @@ html[data-theme='dark'] .home-activity {
   font-size: 0.8rem;
   color: var(--text-muted);
 }
-.currently-list { list-style: none; display: grid; gap: 0.75rem; }
-.currently-item { display: flex; align-items: baseline; gap: 0.75rem; font-size: 0.95rem; }
+.currently-list { list-style: none; display: grid; align-content: start; gap: 0.75rem; }
+.currently-item { display: flex; align-items: center; gap: 0.75rem; font-size: 0.95rem; }
 .currently-dot { flex: 0 0 7px; width: 7px; height: 7px; border-radius: 50%; background: #58b88a; align-self: center; }
 .currently-item:nth-child(even) .currently-dot { background: #5798e5; }
 .currently-status { font-size: 0.85rem; color: var(--text-muted); }
