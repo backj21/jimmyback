@@ -1,9 +1,7 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Jimmy Back — Computer Science Undergraduate at UIUC." />
+<!DOCTYPE html><html lang="en" class="scroll-smooth"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jimmy Back — Computer Science Undergraduate at UIUC." data-ko-content="Jimmy Back — UIUC 컴퓨터과학 전공 · AI 및 애플리케이션 개발">
   <title>Jimmy Back</title>
   
   <script>
@@ -23,11 +21,11 @@
   <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
 
   <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800;900&family=Geist+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800;900&amp;family=Geist+Mono:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=20260912-currently-2" />
+  <link rel="stylesheet" href="style.css?v=20260912-language">
 </head>
 <body class="transition-colors duration-300">
 
@@ -36,16 +34,16 @@
     <nav class="floating-nav">
       <a href="#home" class="nav-brand">J</a>
       <div class="nav-links">
-        <a href="#experience" class="nav-link">Experience</a>
-        <a href="#projects"   class="nav-link">Projects</a>
-        <a href="#skills"     class="nav-link">Skills</a>
-        <a href="#contact"    class="nav-link">Contact</a>
+        <a href="#experience" class="nav-link" data-ko="경력">Experience</a>
+        <a href="#projects" class="nav-link" data-ko="프로젝트">Projects</a>
+        <a href="#skills" class="nav-link" data-ko="기술">Skills</a>
+        <a href="#contact" class="nav-link" data-ko="연락처">Contact</a>
       </div>
       <!-- Theme toggle is embedded in the nav for a clean look -->
       <button id="theme-toggle" class="nav-theme-toggle" type="button" aria-label="Toggle dark mode">
         <span class="theme-toggle-icon">🌙</span>
       </button>
-    </nav>
+    <div class="language-toggle" role="group" aria-label="Language / 언어"><button type="button" data-language="en" lang="en" aria-label="English" aria-pressed="true">EN</button><span aria-hidden="true">/</span><button type="button" data-language="ko" lang="ko" aria-label="한국어" aria-pressed="false">KR</button></div></nav>
   </header>
 
   <!-- ============ MAIN CONTENT ============ -->
@@ -56,14 +54,14 @@
       <div class="reveal">
         <div class="hero-status">
           <span class="status-indicator"></span>
-          <span>Open to Opportunities</span>
+          <span data-ko="새로운 기회를 찾고 있습니다">Open to Opportunities</span>
         </div>
-        <h1 class="hero-title">
+        <h1 class="hero-title" data-ko="안녕하세요.<br>소프트웨어 엔지니어<br><span class=&quot;highlight&quot;>Jimmy Back</span>입니다.">
           HELLO, <br>
           I'M <span class="highlight">JIMMY BACK.</span><br>
           SOFTWARE ENGINEER.
         </h1>
-        <p class="hero-subtitle">
+        <p class="hero-subtitle" data-ko="<strong>UIUC</strong>에서 컴퓨터과학을 전공하며, AI와 지능형 애플리케이션 개발에 집중하고 있습니다.">
           CS undergrad at <strong>UIUC</strong> focused on AI and building intelligent applications.
         </p>
       </div>
@@ -73,13 +71,13 @@
     <div class="home-activity">
       <section class="currently-strip" aria-labelledby="currently-heading">
         <div class="activity-label">
-          <h2 id="currently-heading">Currently</h2>
-          <time datetime="2026-09">Sep 2026</time>
+          <h2 id="currently-heading" data-ko="현재 작업">Currently</h2>
+          <time datetime="2026-09" data-ko="2026년 9월">Sep 2026</time>
         </div>
         <ul class="currently-list" id="currently-list">
           <li class="currently-item">
             <a href="https://everydaysori.com" target="_blank" rel="noopener noreferrer">
-              <span class="currently-copy"><span class="currently-dot" aria-hidden="true"></span>Building Sori<span class="currently-status">Turns Korean speech into polished text on macOS.</span></span>
+              <span class="currently-copy"><span class="currently-dot" aria-hidden="true"></span><span data-ko="Sori 개발 중">Building Sori</span><span class="currently-status" data-ko="한국어 음성을 자연스러운 글로 다듬는 macOS 앱">Turns Korean speech into polished text on macOS.</span></span>
               <span class="currently-arrow" aria-hidden="true">↗</span>
             </a>
           </li>
@@ -88,24 +86,24 @@
 
       <section class="github-activity" aria-labelledby="github-heading">
         <div class="github-header">
-          <h2 id="github-heading" class="activity-eyebrow">GitHub activity</h2>
-          <p id="github-total" role="status">Loading contribution activity…</p>
-          <a class="activity-link" href="https://github.com/backj21" target="_blank" rel="noopener noreferrer">View GitHub <span aria-hidden="true">↗</span></a>
+          <h2 id="github-heading" class="activity-eyebrow" data-ko="GitHub 활동">GitHub activity</h2>
+          <p id="github-total" role="status" data-ko="GitHub 활동을 불러오는 중…">Loading contribution activity…</p>
+          <a class="activity-link" href="https://github.com/backj21" target="_blank" rel="noopener noreferrer" data-ko="GitHub 보기 <span aria-hidden=&quot;true&quot;>↗</span>">View GitHub <span aria-hidden="true">↗</span></a>
         </div>
-        <div id="github-calendar-content" hidden>
-          <div class="calendar-scroll" tabindex="0" role="region" aria-label="Contribution calendar; scroll horizontally to see the full year">
+        <div id="github-calendar-content" hidden="">
+          <div class="calendar-scroll" tabindex="0" role="region" aria-label="Contribution calendar; scroll horizontally to see the full year" data-ko-aria-label="기여 달력 · 가로로 스크롤하면 전체 기간을 볼 수 있습니다">
             <div id="github-calendar" class="contribution-calendar" role="img" aria-label="GitHub contributions over the last year"></div>
           </div>
           <div class="github-footer">
             <p id="github-updated"></p>
             <div class="calendar-legend" aria-hidden="true">
-              <span>Less</span><i data-level="0"></i><i data-level="1"></i><i data-level="2"></i><i data-level="3"></i><i data-level="4"></i><span>More</span>
+              <span data-ko="적음">Less</span><i data-level="0"></i><i data-level="1"></i><i data-level="2"></i><i data-level="3"></i><i data-level="4"></i><span data-ko="많음">More</span>
             </div>
           </div>
           <details class="contribution-details">
-            <summary>View daily counts</summary>
+            <summary data-ko="일별 기여 보기">View daily counts</summary>
             <div class="contribution-table-scroll">
-              <table><caption>GitHub contributions by day, newest first</caption><thead><tr><th scope="col">Date</th><th scope="col">Contributions</th></tr></thead><tbody id="github-daily-counts"></tbody></table>
+              <table><caption data-ko="일별 GitHub 기여 · 최신순">GitHub contributions by day, newest first</caption><thead><tr><th scope="col" data-ko="날짜">Date</th><th scope="col" data-ko="기여 수">Contributions</th></tr></thead><tbody id="github-daily-counts"></tbody></table>
             </div>
           </details>
         </div>
@@ -117,28 +115,28 @@
     <section id="experience" class="section">
       <div class="section-header reveal">
         <span class="section-number">01</span>
-        <h2 class="section-title">EXPERIENCE</h2>
+        <h2 class="section-title" data-ko="경력">EXPERIENCE</h2>
       </div>
 
       <div class="experience-list">
         <!-- Elara Health -->
         <div class="experience-item reveal group">
           <div class="exp-meta">
-            <span class="exp-date">May – Aug 2026</span>
+            <span class="exp-date" data-ko="2026년 5월 – 8월">May – Aug 2026</span>
           </div>
           <div class="exp-content">
-            <h3 class="exp-role">AI Engineering Intern</h3>
-            <p class="exp-company">Elara Health Inc. · San Francisco, CA</p>
-            <p class="exp-desc">
+            <h3 class="exp-role" data-ko="AI 엔지니어링 인턴">AI Engineering Intern</h3>
+            <p class="exp-company" data-ko="Elara Health Inc. · 미국 샌프란시스코">Elara Health Inc. · San Francisco, CA</p>
+            <p class="exp-desc" data-ko="LLM 기반 정보 추출 파이프라인을 66개 필드로 확장하고, 복수 ICD/HCPCS 코드 추출과 검증 점수 산정을 구현했습니다. 팩스 200건 이상을 처리하며 실제 데이터에서 약 98.5%의 필드 단위 정확도를 달성했습니다.">
               Expanded an LLM extraction pipeline to 66 fields with multi-code ICD/HCPCS capture and validation scoring. Processed 200+ faxes and achieved approximately 98.5% field-level accuracy on actual data.
             </p>
-            <p class="exp-desc">
+            <p class="exp-desc" data-ko="숙련된 의료 행정 담당자의 병원별 업무 흐름과 의사결정 로직을 AI 에이전트가 실행 중 참조하는 구조화된 지식 그래프로 구현했습니다. 조건 분기, LLM 기반 오류 복구, 사람의 검토를 위한 중단 기능을 갖춘 브라우저 에이전트 구성 요소를 설계했습니다. PostHog 기반 내부 KPI 도구와 팀 평가 프로세스를 구축해 개발 속도를 높였습니다.">
               Encoded clinic-specific workflows and decision logic from experienced healthcare administrators into structured knowledge graphs consumed by AI agents at runtime. Designed browser-agent components with conditional branching, LLM-based recovery, and stops for human review. Built internal KPI tools through PostHog and established team evaluation loops to speed up development.
             </p>
             <div class="tag-group">
               <span class="tag">LLMs</span>
-              <span class="tag">Knowledge Graphs</span>
-              <span class="tag">Browser Agents</span>
+              <span class="tag" data-ko="지식 그래프">Knowledge Graphs</span>
+              <span class="tag" data-ko="브라우저 에이전트">Browser Agents</span>
               <span class="tag">PostHog</span>
             </div>
           </div>
@@ -147,17 +145,17 @@
         <!-- Item 1 -->
         <div class="experience-item reveal group">
           <div class="exp-meta">
-            <span class="exp-date">2025 - Present</span>
+            <span class="exp-date" data-ko="2025년 – 현재">2025 - Present</span>
           </div>
           <div class="exp-content">
-            <h3 class="exp-role">Undergraduate Research Assistant</h3>
+            <h3 class="exp-role" data-ko="학부 연구원">Undergraduate Research Assistant</h3>
             <p class="exp-company">UIUC PlatformX Research Lab</p>
-            <p class="exp-desc">
+            <p class="exp-desc" data-ko="CPU 오버헤드를 줄이기 위해 GPU Direct Storage용 분산 파일 시스템 아키텍처를 설계하고 있습니다. 대규모 시스템의 내부 구조를 분석하며 클라이언트·세션 간 조율과 쓰기 처리의 안정성을 개선하고 있습니다.">
               Designing a distributed file system architecture for GPU Direct Storage to reduce CPU overhead. Analyzing large-scale system internals to improve client-session coordination and write-throughput reliability.
             </p>
             <div class="tag-group">
-              <span class="tag">Distributed Systems</span>
-              <span class="tag">Storage</span>
+              <span class="tag" data-ko="분산 시스템">Distributed Systems</span>
+              <span class="tag" data-ko="스토리지">Storage</span>
               <span class="tag">C++</span>
             </div>
           </div>
@@ -166,17 +164,17 @@
         <!-- Item 2 -->
         <div class="experience-item reveal group">
           <div class="exp-meta">
-            <span class="exp-date">Summer 2025</span>
+            <span class="exp-date" data-ko="2025년 여름">Summer 2025</span>
           </div>
           <div class="exp-content">
-            <h3 class="exp-role">Systems Software Engineering Intern</h3>
-            <p class="exp-company">Samsung Electronics</p>
-            <p class="exp-desc">
+            <h3 class="exp-role" data-ko="시스템 소프트웨어 엔지니어링 인턴">Systems Software Engineering Intern</h3>
+            <p class="exp-company" data-ko="삼성전자">Samsung Electronics</p>
+            <p class="exp-desc" data-ko="공유 메모리와 사용자 정의 시스템 호출로 Linux 커널·사용자 공간 간 저지연 진단 기능을 구현했습니다. 자체 파일 시스템을 개발하고 QEMU 기반 테스트 환경에서 검증했습니다.">
               Implemented low-latency Linux kernel-user diagnostics through shared memory and custom system calls. Built a custom file system validated through a QEMU-based test loop.
             </p>
             <div class="tag-group">
-              <span class="tag">Linux Kernel</span>
-              <span class="tag">File Systems</span>
+              <span class="tag" data-ko="Linux 커널">Linux Kernel</span>
+              <span class="tag" data-ko="파일 시스템">File Systems</span>
               <span class="tag">C</span>
             </div>
           </div>
@@ -185,12 +183,12 @@
         <!-- Item 3 -->
         <div class="experience-item reveal group">
           <div class="exp-meta">
-            <span class="exp-date">Summer 2024</span>
+            <span class="exp-date" data-ko="2024년 여름">Summer 2024</span>
           </div>
           <div class="exp-content">
-            <h3 class="exp-role">Software Engineering Intern</h3>
+            <h3 class="exp-role" data-ko="소프트웨어 엔지니어링 인턴">Software Engineering Intern</h3>
             <p class="exp-company">NHN Cloud</p>
-            <p class="exp-desc">
+            <p class="exp-desc" data-ko="Java와 Spring Boot로 클라우드 네이티브 백엔드 서비스를 개발했습니다. 레거시 모듈을 리팩터링하고, 성능 중심의 스케줄링 로직을 적용한 다중 엘리베이터 시뮬레이션 엔진을 공동 개발했습니다.">
               Developed cloud-native backend services with Java and Spring Boot. Refactored legacy modules and co-developed a multi-elevator simulation engine with performance-focused scheduling logic.
             </p>
             <div class="tag-group">
@@ -206,7 +204,7 @@
     <section id="projects" class="section">
       <div class="section-header reveal">
         <span class="section-number">02</span>
-        <h2 class="section-title">PROJECTS</h2>
+        <h2 class="section-title" data-ko="프로젝트">PROJECTS</h2>
       </div>
 
       <div class="project-grid">
@@ -214,8 +212,8 @@
         <div class="project-card reveal">
           <div class="project-card-inner">
             <h3 class="project-title">ease 'n spect</h3>
-            <p class="project-award">1st Place • HackIllinois Caterpillar</p>
-            <p class="project-desc">
+            <p class="project-award" data-ko="HackIllinois Caterpillar 트랙 · 1위">1st Place • HackIllinois Caterpillar</p>
+            <p class="project-desc" data-ko="3D 카메라 안내, 음성 메모, 멀티모달 분석으로 중장비 점검을 지원하는 AI 기반 모바일 앱입니다.">
               AI-powered mobile inspection workflow that guides heavy-equipment checks with 3D camera cues, voice notes, and multimodal analysis.
             </p>
             <div class="tag-group">
@@ -233,8 +231,8 @@
         <div class="project-card reveal">
           <div class="project-card-inner">
             <h3 class="project-title">UIUC Datathon 2025</h3>
-            <p class="project-award">2nd Place • 180 Teams</p>
-            <p class="project-desc">
+            <p class="project-award" data-ko="180개 팀 중 2위">2nd Place • 180 Teams</p>
+            <p class="project-desc" data-ko="과거 고객 지출 데이터를 가공하고 특성을 설계해 XGBoost 모델과 HDBSCAN 군집화에 활용했습니다. 이를 통해 신용 이력이 우수한 계좌를 식별했습니다.">
               Pipeline for formatting historical customer spending: engineered signals feeding an XGBoost model and HDBSCAN clustering to highlight strong credit histories.
             </p>
             <div class="tag-group">
@@ -253,12 +251,12 @@
     <section id="skills" class="section">
       <div class="section-header reveal">
         <span class="section-number">03</span>
-        <h2 class="section-title">SKILLS</h2>
+        <h2 class="section-title" data-ko="기술">SKILLS</h2>
       </div>
 
       <div class="skills-grid reveal">
         <div class="skill-category">
-          <h3 class="skill-head">Languages</h3>
+          <h3 class="skill-head" data-ko="프로그래밍 언어">Languages</h3>
           <ul class="skill-list">
             <li>C / C++</li>
             <li>Java</li>
@@ -267,19 +265,19 @@
           </ul>
         </div>
         <div class="skill-category">
-          <h3 class="skill-head">Frameworks</h3>
+          <h3 class="skill-head" data-ko="프레임워크">Frameworks</h3>
           <ul class="skill-list">
-            <li>React & Native</li>
+            <li>React &amp; Native</li>
             <li>Spring Boot</li>
-            <li>Express & Node</li>
+            <li>Express &amp; Node</li>
             <li>FastAPI</li>
           </ul>
         </div>
         <div class="skill-category">
-          <h3 class="skill-head">Tools & Sys</h3>
+          <h3 class="skill-head" data-ko="도구 및 시스템">Tools &amp; Sys</h3>
           <ul class="skill-list">
             <li>Linux / Unix</li>
-            <li>Git & GitHub</li>
+            <li>Git &amp; GitHub</li>
             <li>GDB / Valgrind</li>
             <li>Docker</li>
           </ul>
@@ -291,12 +289,12 @@
     <section id="contact" class="section">
       <div class="section-header reveal">
         <span class="section-number">04</span>
-        <h2 class="section-title">CONTACT</h2>
+        <h2 class="section-title" data-ko="연락처">CONTACT</h2>
       </div>
 
       <div class="contact-box reveal">
-        <h2 class="contact-big-text">LET'S BUILD <br>SOMETHING.</h2>
-        <a href="mailto:backjimmy3@gmail.com" class="btn-primary">GET IN TOUCH ↗</a>
+        <h2 class="contact-big-text" data-ko="함께 만들어<br>나가요.">LET'S BUILD <br>SOMETHING.</h2>
+        <a href="mailto:backjimmy3@gmail.com" class="btn-primary" data-ko="연락하기 ↗">GET IN TOUCH ↗</a>
       </div>
     </section>
 
@@ -304,7 +302,7 @@
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <p>&copy; <span id="footer-year"></span> Jimmy Back</p>
+      <p>© <span id="footer-year"></span> Jimmy Back</p>
       <div class="footer-links">
         <a href="https://github.com/backj21" target="_blank" rel="noopener noreferrer">GitHub</a>
         <a href="https://www.linkedin.com/in/jimmyback3" target="_blank" rel="noopener noreferrer">LinkedIn</a>
@@ -312,8 +310,9 @@
     </div>
   </footer>
 
-  <script src="theme.js"></script>
+  <script src="language.js?v=1"></script><script src="theme.js?v=2"></script>
   <script src="script.js"></script>
-  <script src="github-activity.js"></script>
-</body>
-</html>
+  <script src="github-activity.js?v=2"></script>
+
+
+</body></html>

@@ -3,14 +3,19 @@
   const total = document.getElementById('github-total');
   if (!total) return;
   const levels = ['NONE', 'FIRST_QUARTILE', 'SECOND_QUARTILE', 'THIRD_QUARTILE', 'FOURTH_QUARTILE'];
-  const dateLabel = value => new Date(value + 'T00:00:00Z').toLocaleDateString('en-US', {
+  const locale = () => window.PortfolioLanguage?.locale() || 'en-US';
+  const text = (key, values) => window.PortfolioLanguage.text(key, values);
+  let snapshot;
+  let failed = false;
+  const dateLabel = value => new Date(value + 'T00:00:00Z').toLocaleDateString(locale(), {
     month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC'
   });
-  try {
-    const response = await fetch('data/github-activity.json', { signal: AbortSignal.timeout(10000) });
-    if (!response.ok) throw new Error('Contribution data unavailable');
-    const data = await response.json();
-    if (!Number.isInteger(data.totalContributions) || !data.weeks?.length) throw new Error('Invalid calendar');
+  function render() {
+    if (!snapshot) {
+      total.textContent = text(failed ? 'unavailable' : 'loading');
+      return;
+    }
+    const data = snapshot;
     const calendar = document.getElementById('github-calendar');
     calendar.style.gridTemplateColumns = `repeat(${data.weeks.length}, minmax(11px, 1fr))`;
     const cells = document.createDocumentFragment();
@@ -23,7 +28,7 @@
         const label = document.createElement('span');
         label.className = 'calendar-month';
         label.style.gridColumn = `${column + 1} / span 3`;
-        label.textContent = new Date(firstDay.date + 'T00:00:00Z').toLocaleDateString('en-US', { month: 'short', timeZone: 'UTC' });
+        label.textContent = new Date(firstDay.date + 'T00:00:00Z').toLocaleDateString(locale(), { month: 'short', timeZone: 'UTC' });
         cells.append(label);
         previousMonth = month;
       }
@@ -33,13 +38,13 @@
         cell.dataset.level = String(Math.max(0, levels.indexOf(day.contributionLevel)));
         cell.style.gridColumn = column + 1;
         cell.style.gridRow = day.weekday + 2;
-        cell.title = `${dateLabel(day.date)}: ${day.contributionCount} contribution${day.contributionCount === 1 ? '' : 's'}`;
+        cell.title = text('day', { date: dateLabel(day.date), count: day.contributionCount });
         cells.append(cell);
         days.push(day);
       });
     });
-    const count = data.totalContributions.toLocaleString('en-US');
-    calendar.setAttribute('aria-label', `${count} GitHub contributions in the last year. Daily counts are available below.`);
+    const count = data.totalContributions.toLocaleString(locale());
+    calendar.setAttribute('aria-label', text('calendar', { count }));
     calendar.replaceChildren(cells);
     const rows = document.createDocumentFragment();
     [...days].reverse().forEach(day => {
@@ -52,11 +57,24 @@
       rows.append(row);
     });
     document.getElementById('github-daily-counts').replaceChildren(rows);
-    total.textContent = `${count} contributions in the last year`;
+    total.textContent = text('total', { count });
     const stale = Date.now() - Date.parse(data.updatedAt) > 3 * 86400000;
-    document.getElementById('github-updated').textContent = `Updated ${dateLabel(data.updatedAt.slice(0, 10))}${stale ? ' · Refresh pending' : ''}`;
+    document.getElementById('github-updated').textContent = text('updated', { date: dateLabel(data.updatedAt.slice(0, 10)) }) + (stale ? text('pending') : '');
     document.getElementById('github-calendar-content').hidden = false;
+  }
+  document.addEventListener('languagechange', render);
+  render();
+  try {
+    const response = await fetch('data/github-activity.json', { signal: AbortSignal.timeout(10000) });
+    if (!response.ok) throw new Error('Contribution data unavailable');
+    const data = await response.json();
+    if (!Number.isInteger(data.totalContributions) || !data.weeks?.length) throw new Error('Invalid calendar');
+    snapshot = data;
+    render();
   } catch {
-    total.textContent = 'Contribution activity is temporarily unavailable. View it on GitHub.';
+    snapshot = null;
+    failed = true;
+    document.getElementById('github-calendar-content').hidden = true;
+    render();
   }
 })();

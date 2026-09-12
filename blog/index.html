@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Jimmy Back's programming blog — systems, web, algorithms, and student life." />
-  <title>Blog — Jimmy Back</title>
+<!DOCTYPE html><html lang="en" class="scroll-smooth"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jimmy Back's programming blog — systems, web, algorithms, and student life." data-ko-content="Jimmy Back의 개발 블로그 — 시스템, 웹, 알고리즘, 대학 생활">
+  <title data-ko="블로그 — Jimmy Back">Blog — Jimmy Back</title>
   <script>
     (function () {
       try {
@@ -16,9 +14,9 @@
   </script>
 
   <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;family=Geist+Mono:wght@100..900&amp;display=swap" rel="stylesheet">
 
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -36,7 +34,7 @@
     }
   </script>
 
-  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../style.css?v=20260912-language">
 </head>
 <body class="font-sans bg-[#FAFAF5] text-[#111111] antialiased">
 
@@ -48,17 +46,17 @@
           Jimmy Back
         </a>
         <div class="hidden md:flex items-center gap-7">
-          <a href="../index.html#about"      class="nav-link">About</a>
-          <a href="../index.html#skills"     class="nav-link">Skills</a>
-          <a href="../index.html#projects"   class="nav-link">Projects</a>
-          <a href="../blog/"                 class="nav-link active">Blog</a>
-          <a href="../index.html#experience" class="nav-link">Experience</a>
-          <a href="../index.html#contact"    class="nav-cta">Contact ↗</a>
+          <a href="../index.html#about" class="nav-link" data-ko="소개">About</a>
+          <a href="../index.html#skills" class="nav-link" data-ko="기술">Skills</a>
+          <a href="../index.html#projects" class="nav-link" data-ko="프로젝트">Projects</a>
+          <a href="../blog/" class="nav-link active" data-ko="블로그">Blog</a>
+          <a href="../index.html#experience" class="nav-link" data-ko="경력">Experience</a>
+          <a href="../index.html#contact" class="nav-cta" data-ko="연락처 ↗">Contact ↗</a>
         </div>
-        <a href="../index.html" class="md:hidden text-sm font-medium text-[#888] hover:text-[#111] transition-colors">
+        <a href="../index.html" class="md:hidden text-sm font-medium text-[#888] hover:text-[#111] transition-colors" data-ko="← 홈">
           ← Home
         </a>
-      </div>
+      <div class="language-toggle" role="group" aria-label="Language / 언어"><button type="button" data-language="en" lang="en" aria-label="English" aria-pressed="true">EN</button><span aria-hidden="true">/</span><button type="button" data-language="ko" lang="ko" aria-label="한국어" aria-pressed="false">KR</button></div></div>
     </div>
   </nav>
 
@@ -66,11 +64,11 @@
   <!-- ============ HEADER ============ -->
   <header class="blog-page-header pt-32 pb-16 px-6 bg-white border-b border-[#E8E2D9]">
     <div class="max-w-7xl mx-auto">
-      <p class="font-mono text-xs text-[#E8541E] tracking-[0.1em] uppercase mb-3">// Writing</p>
-      <h1 class="font-display text-[clamp(3rem,8vw,6rem)] leading-none tracking-tight text-[#111] mb-4">
+      <p class="font-mono text-xs text-[#E8541E] tracking-[0.1em] uppercase mb-3" data-ko="// 글">// Writing</p>
+      <h1 class="font-display text-[clamp(3rem,8vw,6rem)] leading-none tracking-tight text-[#111] mb-4" data-ko="블로그">
         The Blog
       </h1>
-      <p class="text-[#777] text-lg max-w-xl leading-relaxed">
+      <p class="text-[#777] text-lg max-w-xl leading-relaxed" data-ko="시스템 프로그래밍, 웹 개발, 알고리즘, UIUC 컴퓨터과학 전공생의 일상을 기록합니다.">
         Notes on systems programming, web development, algorithms, and life as a CS student at UIUC.
       </p>
     </div>
@@ -81,8 +79,8 @@
   <div class="blog-filter-bar sticky top-16 z-40 bg-[#FAFAF5]/95 backdrop-blur-md border-b border-[#E8E2D9]">
     <div class="max-w-7xl mx-auto px-6 lg:px-10">
       <div class="flex items-center gap-1 py-3 overflow-x-auto no-scrollbar">
-        <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="Career">Career</button>
+        <button class="filter-btn active" data-filter="all" data-ko="전체">All</button>
+        <button class="filter-btn" data-filter="Career" data-ko="커리어">Career</button>
       </div>
     </div>
   </div>
@@ -96,16 +94,16 @@
 
         <a href="my-first-hackathon.html" class="blog-card group" data-category="Career">
           <div class="blog-meta">
-            <span class="blog-tag">Career</span>
-            <span class="blog-date font-mono">Mar 2026</span>
+            <span class="blog-tag" data-ko="커리어">Career</span>
+            <span class="blog-date font-mono" data-ko="2026년 3월">Mar 2026</span>
           </div>
-          <h2 class="blog-title">My First Hackathon</h2>
-          <p class="blog-excerpt">
-            Reflections from building ease &#39;n spect at HackIllinois and what I learned
+          <h2 class="blog-title" data-ko="나의 첫 해커톤">My First Hackathon</h2>
+          <p class="blog-excerpt" data-ko="HackIllinois에서 ease 'n spect를 만들며 협업, 빠른 개발, 시간 제약 속 발표를 통해 배운 점을 돌아봅니다.">
+            Reflections from building ease 'n spect at HackIllinois and what I learned
             from collaborating, shipping fast, and presenting under pressure.
           </p>
           <div class="blog-footer">
-            <span class="blog-readmore">4 min read →</span>
+            <span class="blog-readmore" data-ko="읽는 시간 4분 →">4 min read →</span>
             <span class="blog-author font-mono">Jimmy Back</span>
           </div>
         </a>
@@ -121,8 +119,8 @@
 
       <!-- Empty state (shown by JS when filter has no results) -->
       <div id="empty-state" class="hidden text-center py-24">
-        <p class="font-display text-4xl text-[#DDD] mb-3">No posts yet</p>
-        <p class="text-[#AAA] text-sm">Check back soon — more writing on the way.</p>
+        <p class="font-display text-4xl text-[#DDD] mb-3" data-ko="아직 게시글이 없습니다">No posts yet</p>
+        <p class="text-[#AAA] text-sm" data-ko="새로운 글을 준비 중입니다. 곧 다시 방문해 주세요.">Check back soon — more writing on the way.</p>
       </div>
 
     </div>
@@ -132,8 +130,8 @@
   <!-- ============ FOOTER ============ -->
   <footer class="py-8 px-6 border-t border-[#E8E2D9]">
     <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[#AAA]">
-      <a href="../index.html" class="font-mono hover:text-[#E8541E] transition-colors">← Back to Portfolio</a>
-      <p class="font-mono">&copy; <span id="footer-year"></span> Jimmy Back</p>
+      <a href="../index.html" class="font-mono hover:text-[#E8541E] transition-colors" data-ko="← 포트폴리오로 돌아가기">← Back to Portfolio</a>
+      <p class="font-mono">© <span id="footer-year"></span> Jimmy Back</p>
     </div>
   </footer>
 
@@ -210,6 +208,7 @@
     <span class="theme-toggle-icon" aria-hidden="true">🌙</span>
     <span class="theme-toggle-label">Dark</span>
   </button>
-  <script src="../theme.js"></script>
-</body>
-</html>
+  <script src="../language.js?v=1"></script><script src="../theme.js?v=2"></script>
+
+
+</body></html>

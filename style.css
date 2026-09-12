@@ -632,3 +632,22 @@ html[data-theme='dark'] .home-activity {
   .github-header { gap: 0.5rem; }
   .github-header p { order: 3; flex-basis: 100%; }
 }
+
+/* ---------- Language control and Korean typography ---------- */
+.language-toggle { display: inline-flex; align-items: center; gap: 0.1rem; flex-shrink: 0; color: var(--text-muted); font-family: 'Geist Mono', monospace; font-size: 0.7rem; }
+.language-toggle button { border: 0; background: transparent; color: inherit; font: inherit; min-width: 30px; min-height: 32px; padding: 0.25rem; border-radius: 4px; cursor: pointer; }
+.language-toggle button[aria-pressed='true'] { color: var(--text); font-weight: 700; }
+.language-toggle button:hover { color: var(--accent-1); }
+.language-toggle button:focus-visible { outline: 2px solid var(--accent-1); outline-offset: 2px; }
+html[lang='ko'] body { font-family: 'Geist', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif; word-break: keep-all; overflow-wrap: anywhere; }
+html[lang='ko'] .hero-title { font-size: clamp(2.1rem, 6.5vw, 4.5rem); line-height: 1.2; letter-spacing: -0.04em; text-transform: none; }
+html[lang='ko'] .contact-big-text { line-height: 1.2; }
+html[lang='ko'] .section-title { line-height: 1.25; }
+@media (max-width: 640px) {
+  .floating-nav { flex-wrap: wrap; column-gap: 0.5rem; row-gap: 0.15rem; justify-content: center; }
+  .floating-nav .nav-links { order: 3; flex-basis: 100%; justify-content: center; gap: 1.1rem; }
+  .floating-nav .nav-brand { margin-right: auto; }
+  .floating-nav .nav-theme-toggle { margin-left: auto; }
+  .floating-nav .nav-link { padding: 0.25rem 0; }
+  .hero-section { padding-top: 8rem; }
+}

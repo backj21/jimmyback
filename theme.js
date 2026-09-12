@@ -21,10 +21,14 @@
     var isDark = theme === 'dark';
 
     btn.setAttribute('aria-pressed', isDark ? 'true' : 'false');
-    btn.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+    btn.setAttribute('aria-label', window.PortfolioLanguage ? window.PortfolioLanguage.text(isDark ? 'light' : 'dark') : (isDark ? 'Switch to light mode' : 'Switch to dark mode'));
     if (icon) icon.textContent = isDark ? '☀' : '🌙';
-    if (label) label.textContent = isDark ? 'Light' : 'Dark';
+    if (label) label.textContent = window.PortfolioLanguage ? window.PortfolioLanguage.text(isDark ? 'lightLabel' : 'darkLabel') : (isDark ? 'Light' : 'Dark');
   }
+
+  document.addEventListener('languagechange', function () {
+    setTheme(document.documentElement.getAttribute('data-theme') || getPreferredTheme());
+  });
 
   document.addEventListener('DOMContentLoaded', function () {
     var current = document.documentElement.getAttribute('data-theme') || getPreferredTheme();

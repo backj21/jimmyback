@@ -24,3 +24,19 @@ GH_TOKEN="$(gh auth token)" node scripts/refresh-github-activity.mjs
 
 Run data checks with `node --test tests/*.test.mjs`. Serve the repository with
 `python3 -m http.server 8080`; contribution data requires HTTP, not a `file:` URL.
+
+## Languages
+
+The EN/KR control switches between English and Korean and saves the choice in
+local storage. Share `?lang=ko` or `?lang=en` to open a specific language;
+the query parameter overrides the saved preference. English is the default.
+The HTML language tag uses the standard `ko` code; the button displays `KR`.
+
+English copy lives in the HTML. Add the equivalent Korean copy in `data-ko`
+on the same element. Use `data-ko-aria-label` for accessible labels and
+`data-ko-content` for metadata. Keep translated elements unnested so switching
+languages preserves their DOM references. Dynamic calendar and theme messages
+live in `language.js`. Update both languages when changing homepage or blog copy.
+
+There is still no production build step. Development tests use jsdom:
+`npm ci --ignore-scripts` followed by `npm test`.
